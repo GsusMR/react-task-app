@@ -1,11 +1,9 @@
-import {useContext} from 'react'
+import {use, useContext} from 'react'
 import { TaskContext } from '../context/TaskContext'
 
-function TaskCard({task,deleteTask}) {
+function TaskCard({task}) {
 
-  function mostrarAlerta(){
-    alert("Eliminando...")
-  }
+  const {deleteTask} = useContext(TaskContext);
 
   return (
       <div>
